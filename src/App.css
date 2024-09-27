@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -15,7 +17,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,6 +27,294 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.App-header a:hover {
+  color: #f3f3f3;
+  text-decoration: underline;
+}
+
+.App-header ul {
+  padding-bottom: 50px;
+}
+
+.App-header ul li {
+  text-align: left;
+}
+
+nav {
+  padding: 50px 0;
+  background-color: #282c34;
+}
+
+nav a {
+  color: #fff;
+  padding: 0 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #282c34;
+  text-decoration: underline;
+  background-color: #f3f3f3;
+}
+
+footer {
+  padding: 20px 0;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #282c34;
+}
+
+footer a {
+  padding: 2px 5px;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #282c34;
+  text-decoration: underline;
+  background-color: #f3f3f3;
+}
+
+.App-header .hero {
+  width: 600px;
+  min-height: 60vh;
+}
+
+header .hero button {
+  color: #282c34;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #fff;
+  border-color: #fff;
+  border-style: solid;
+}
+
+header .hero button:hover {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #282c34;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.App-header form  {
+  padding: 5px 30px;
+}
+
+.form-group {
+  margin: 10px 0;
+}
+
+.form-group input {
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  width: 300px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.form-group button {
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 325px;
+  padding: 10px 10px;
+  border-style: solid;
+  background-color: #f3f3f3;
+  border-color: #f3f3f3;
+}
+
+.form-group button:hover {
+  font-weight: bold;
+  color: #fff;
+  background-color: #282c34;
+}
+
+.GoogleOauthBtn {
+  padding: 20px 30px;
+  width: 325px;
+}
+
+.form-group p span {
+  font-size: 1rem;
+}
+
+.contact {
+  min-height: 43vh;
+}
+
+.contact button {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.contact button:hover {
+  background-color: #282c34;
+  color: #fff;
+}
+
+.terms {
+  min-height: 43vh;
+  max-width: 600px;
+  text-align: justify;
+}
+
+.terms a {
+  padding: 2px 10px;
+  color:#fff;
+}
+
+.terms a:hover {
+  color: #282c34;
+  text-decoration: underline;
+  background-color: #f4f4f4;
+}
+
+.about {
+  width: 600px;
+  min-height: 40vh;
+}
+
+.about .about-shoutout p {
+  text-align: justify;
+  padding-bottom: 30px;
+}
+
+.about .about-features p {
+  text-align: justify;
+}
+
+.tasks {
+  margin: auto;
+  max-width: 760px;
+  min-height: 50vh;
+}
+
+.tasks h2 {
+  color: #fff;
+}
+
+.tasks h2 a {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.tasks h2 a:hover {
+  text-decoration: underline;
+}
+
+.tasks .tasks-ul {
+}
+
+.tasks .task-ul table tbody tr {
+  display: flex;
+  align-items: center;
+}
+
+.tasks .tasks-ul table tbody tr td {
+  border: 1px solid grey;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left;
+}
+
+.tasks .tasks-ul p {
+  align-items: center;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.tasks-items a {
+  color: #fff;
+  text-decoration: none;
+  width: 600px;
+}
+
+.tasks-items a:hover {
+  background-color: #fff;
+  color:blue;
+  text-decoration: underline;
+}
+
+.tasks-action a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.tasks-action a:hover {
+  color: red;
+  background-color: #f3f3f3;
+  text-decoration: underline;
+}
+
+.task-details form {
+  text-align: justify;
+  width: 600px;
+}
+
+.task-details form .form-group {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  border: 1px solid #fff;
+}
+
+.task-details form .form-group label {
+  width: 140px;
+  margin: 0 5px;
+}
+
+.task-details form .form-group input {
+  width: 430px;
+}
+
+.task-details form .form-group select {
+  width: 450px;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+}
+
+.task-details form .form-group button {
+  width: 100%;
+  background-color: #fff;
+}
+
+.task-details form .form-group button:hover {
+  background-color: #282c34;
+  color: #fff;
+}
+
+.tasks .task-form {
+  display: flex;
+  align-items: center;
+}
+
+.tasks .task-form .form-group input {
+  width: 630px;
+}
+
+.tasks .task-form .form-group button {
+  width: 100px;
 }
 
 @keyframes App-logo-spin {
