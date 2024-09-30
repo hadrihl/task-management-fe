@@ -34,15 +34,23 @@ const UserList = () => {
             
             <h2>Manage Users</h2>
             <table>
-                <tbody>
-                    {users.map((user) => {
+                <thead>
                     <tr>
-                        <td key={user.id}></td>
+                        <th>#</th>
+                        <th>#username</th>
+                        <th>#email</th>
+                        <th>#action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {users.map((user) => (
+                    <tr key={user.id}>
+                        <td >{user.id}</td>
                         <td>{user.username}</td>
                         <td>{user.email}</td>
-                        <a href="#" onClick={() => handleDelete(user.id)}>❌</a>
+                        <td><a href="#" onClick={() => handleDelete(user.id)}>❌</a></td>
                     </tr>
-                    })}
+                    ))}
                 </tbody>
             </table>
         </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getAllUsers, createUser, updateUser } from "../../services/UserService";
 
-const UserForm = (onUserCreated) => {
+const UserForm = ({onUserCreated}) => {
 
     const [user, setUser] = useState({
         username: '',
