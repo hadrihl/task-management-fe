@@ -1,35 +1,43 @@
 import { useEffect, useState } from "react";
 import { getAllUsers, createUser, updateUser } from "../../services/UserService";
 
-const UserForm = () => {
+const UserForm = (onUserCreated) => {
 
-    const [users, setUsers] = useState([]);
+    const [user, setUser] = useState({
+        username: '',
+        email: '',
+        password: ''
+    });
 
-    useEffect(() => {
-        fetchUsers();
-    }, []);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    const fetchUsers = async () => {
         try {
-            const response = await getAllUsers();
-            setUsers(response.data);
+            const response = await createUser(user);
+
+            if(response.status === 201) {
+                if(onUserCreated) {
+                    onUserCreated();
+                }
+
+                setUser({
+                    username: '',
+                    email: '',
+                    password: ''
+                });
+            }
         } catch (error) {
-            console.error("Error fetching users: " + error);
+            console.error("error creating user: ", error);
         }
     };
 
     return (
         <div>
             <h2>UserForm</h2>
-            <table>
-                <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="username" id="username" value={user.username} onChange={(e) => { setUser({...user, username: e.target.value}) }} />
+                <button type="submit">Create</button>
+            </form>
         </div>
     )
     

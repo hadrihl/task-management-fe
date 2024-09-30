@@ -10,8 +10,6 @@ const Users = () => {
             <Navbar />
 
             <div className="App-header">
-                <UserForm />
-                
                 <UserList />
             </div>
 
