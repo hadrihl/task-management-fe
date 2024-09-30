@@ -44,7 +44,7 @@ const TaskList = () => {
                         </td>
                         
                         <td className="tasks-action">
-            
+                        <a href="#" onClick={() => handleDelete(task.id)}>❌</a>
                         </td>
                     </tr>
                     ))
