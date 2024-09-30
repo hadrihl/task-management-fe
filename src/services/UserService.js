@@ -1,19 +1,13 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/api/users"
+const API_URL = "http://localhost:8080/api/users";
 
-const UserService = () => {
+export const getAllUsers = () => axios.get(API_URL);
 
-    registerUser: async (user) => {
-        try {
-            const response = await axios.post(API_URL, post);
-            console.log(reponse.data);
-        } catch (error) {
-            console.error("Error: " + error);
-        }
-    };
+export const getUser = (id) => axios.get(`${API_URL}/${id}`);
 
-}
+export const createUser = (user) => axios.post(API_URL, user);
 
-export default UserService;
-//unfinished
+export const updateUser = (id, user) => axios.put(`${API_URL}/${id}`, user);
+
+export const deleteUser = (id) => axios.delete(`${API_URL}/${id}`);
