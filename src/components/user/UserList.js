@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { deleteUser, getAllUsers } from "../../services/UserService";
 import UserForm from "./UserForm";
+import { Link } from "react-router-dom";
 
 const UserList = () => {
 
@@ -30,9 +31,9 @@ const UserList = () => {
 
     return (
         <div className="users-list">
-            <UserForm onUserCreated={fetchUsers} />
             
-            <h2>Manage Users</h2>
+            
+            <h4>User Management <Link to={`/users/new`}>➕</Link></h4>
             <table>
                 <thead>
                     <tr>
@@ -46,7 +47,7 @@ const UserList = () => {
                     {users.map((user) => (
                     <tr key={user.id}>
                         <td >{user.id}</td>
-                        <td>{user.username}</td>
+                        <td><Link to={`/users/${user.id}`}>{user.username}</Link></td>
                         <td>{user.email}</td>
                         <td><a href="#" onClick={() => handleDelete(user.id)}>❌</a></td>
                     </tr>

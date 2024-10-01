@@ -10,6 +10,8 @@ import Tasks from './pages/Tasks';
 import TaskDetails from './components/task/TaskDetails';
 import TaskForm from './components/task/TaskForm';
 import Users from './pages/Users';
+import UserForm from './components/user/UserForm';
+import UserDetails from './components/user/UserDetails';
 import Progress from './pages/Progress';
 
 import './App.css';
@@ -28,6 +30,8 @@ const App = () => {
                 <Route path="/tasks/:id" element={<TaskDetails />} />
                 <Route path="/tasks/new" element={<TaskForm />} />
                 <Route path="/users" element={<Users />} />
+                <Route path="/users/:id" element={<UserDetails /> } />
+                <Route path="/users/new" element={<UserForm />} />
                 <Route path="/progress" element={<Progress />} />
             </Routes>
         </Router>
